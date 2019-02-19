@@ -69,4 +69,4 @@
             - tigers上でssh公開鍵を作成し、GitHubの自分のアカウントに登録する([参考](https://github.com/mitsuyukiLab/muscle_training))
                 - Ubuntu OSにssh接続しているので、公開鍵のコピー方法のみについては[リンク先](https://stackoverflow.com/questions/16638092/copying-a-rsa-public-key-to-clipboard)を参照のこと
         1. キリがいいところでcommitして作業記録を残す、pushでGitHubレポジトリを更新するなどを行いましょう
-            - 満行は進捗をGitHubレポジトリで確認します
+            - 満行は進捗をGitHubレポジトリで確認します。そのために、満行(taiga4112)をcontributorとして登録してください
