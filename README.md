@@ -13,6 +13,9 @@
     ```
 
 1. DockerHubにおいてあるImageを使ってJupyterLabでトレーニングする場合
+    
+    - Linux/MacOS
+
     ```sh
     $ cd muscle_training
     $ docker run --rm --name muscle_training -d -p 8888:8888 \
@@ -20,6 +23,13 @@
         taiga4112/muscle_training \
         jupyter-lab --no-browser --port=8888 --ip=0.0.0.0 \
         --allow-root --NotebookApp.token='muscle'
+    ```
+
+    - Windows (Windows Terminal or PowerShell)
+
+    ```sh
+    $ cd muscle_training
+    $ docker run --rm --name muscle_training -d -p 8888:8888 -v ${pwd}/menu:/menu -w /menu taiga4112/muscle_training jupyter-lab --no-browser --port=8888 --ip=0.0.0.0 --allow-root --NotebookApp.token='muscle'
     ```
 
     - もし、自分の手元でImageをBuildする場合はこちら
@@ -32,6 +42,7 @@
             jupyter-lab --no-browser --port=8888 --ip=0.0.0.0 \
             --allow-root --NotebookApp.token='muscle'
         ```
+        
 1. [http://localhost:8888](http://localhost:8888)へアクセス
     - access tokenは`muscle`です
 
