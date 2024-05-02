@@ -6,21 +6,9 @@ services:
       dockerfile: "Dockerfile"
     user: root
     volumes:
-      - jupyterlab-dir:/home/JupyterLab/codes
+      - ./menu:/home/JupyterLab/codes
     ports:
       - "8888:8888"
     environment:
       TZ: Asia/Tokyo
-    command:
-      jupyter lab
-          --ip=0.0.0.0
-          --allow-root
-          --no-browser
-          --NotebookApp.notebook_dir='/home/JupyterLab/codes'
-          --NotebookApp.token='muscle'
-volumes:
-  jupyterlab-dir:
-    driver_opts:
-      type: none
-      device: ./menu
-      o: bind
+    command: jupyter lab --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.notebook_dir='/home/JupyterLab/codes' --NotebookApp.token='muscle'
